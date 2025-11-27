@@ -1,8 +1,10 @@
-export default function CabeceraCV() {
+export default function CabeceraCV({ nombre, cargo, ciudad, contacto }) {
     return (
-    <header>
-        <h1>Nombre del Aprendiz</h1>
-        <h2>Desarrollador UI Frontend</h2>
-    </header>
+        <header>
+            <h1>{nombre}</h1>
+            <h2>{cargo}</h2>
+            <p>{ciudad}</p>
+            <p>{contacto}</p>
+        </header>
     );
 }

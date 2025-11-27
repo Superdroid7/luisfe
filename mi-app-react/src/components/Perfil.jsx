@@ -1,10 +1,8 @@
-export default function Perfil() {
+export default function Perfil({ resumen }) {
   return (
     <section>
       <h3>Perfil</h3>
-      <p>
-        Tecnologo en Analisis y Desarrollo de software con experiencia en desarrollo web y móvil, apasionado por la tecnología.
-      </p>
+      <p>{resumen}</p>
     </section>
   );
 }
