@@ -6,10 +6,16 @@ import Experiencia from "./components/Experiencia.jsx";
 import StackTecnologias from "./components/StackTecnologias.jsx";
 import ToggleHabilidades from "./components/ToggleHabilidades.jsx";
 import Habilidades from "./components/Habilidades.jsx";
-import { datosPersonales, perfilProfesional, experiencias, educacion, habilidades } from "./cvData.js";
+import FormularioTecnologia from "./components/FormularioTecnologia.jsx";
+import { datosPersonales, perfilProfesional, experiencias, educacion, habilidades, tecnologiasIniciales } from "./cvData.js";
 
 export default function App() {
+  const [tecnologias, setTecnologias] = useState(tecnologiasIniciales);
   const [mostrarHabilidades, setMostrarHabilidades] = useState(false);
+
+  const agregarTecnologia = (nuevaTecnologia) => {
+    setTecnologias([...tecnologias, nuevaTecnologia]);
+  };
 
   const toggleHabilidades = () => {
     setMostrarHabilidades(!mostrarHabilidades);
@@ -27,6 +33,7 @@ export default function App() {
       {mostrarHabilidades && <Habilidades habilidades={habilidades} />}
 
       <StackTecnologias />
+      <FormularioTecnologia agregarTecnologia={agregarTecnologia} />
     </div>
   );
 }
