@@ -31,6 +31,10 @@ function Todos() {
         ));
     };
 
+    const handleDelete = (id) => {
+        setTodos(todos.filter(todo => todo.id !== id));
+    };
+
     return (
         <div>
             <h1>Lista de Tareas</h1>
@@ -44,19 +48,27 @@ function Todos() {
                         justifyContent: 'space-between',
                         alignItems: 'center'
                     }}>
-                        <span
-                            onClick={() => handleToggleComplete(todo.id)}
-                            style={{
-                                textDecoration: todo.completed ? 'line-through' : 'none',
-                                cursor: 'pointer',
-                                flex: 1
-                            }}
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flex: 1 }}>
+                            <span
+                                onClick={() => handleToggleComplete(todo.id)}
+                                style={{
+                                    textDecoration: todo.completed ? 'line-through' : 'none',
+                                    cursor: 'pointer',
+                                    flex: 1
+                                }}
+                            >
+                                {todo.title}
+                            </span>
+                            <span style={{ fontSize: '0.8rem', color: todo.completed ? 'green' : 'gray' }}>
+                                {todo.completed ? 'Completado' : 'Pendiente'}
+                            </span>
+                        </div>
+                        <button
+                            onClick={() => handleDelete(todo.id)}
+                            style={{ padding: '0.25rem 0.5rem', background: 'red', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer', marginLeft: '1rem' }}
                         >
-                            {todo.title}
-                        </span>
-                        <span style={{ fontSize: '0.8rem', color: todo.completed ? 'green' : 'gray' }}>
-                            {todo.completed ? 'Completado' : 'Pendiente'}
-                        </span>
+                            Eliminar
+                        </button>
                     </li>
                 ))}
             </ul>
