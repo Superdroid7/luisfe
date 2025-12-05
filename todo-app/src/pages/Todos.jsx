@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import TodoForm from '../components/TodoForm';
 
 function Todos() {
     const [todos, setTodos] = useState([]);
@@ -14,9 +15,20 @@ function Todos() {
             .catch(error => console.error('Error fetching todos:', error));
     }, []);
 
+    const handleAddTodo = (title) => {
+        const newTodo = {
+            userId: 1,
+            id: Date.now(),
+            title,
+            completed: false
+        };
+        setTodos([newTodo, ...todos]);
+    };
+
     return (
         <div>
             <h1>Lista de Tareas</h1>
+            <TodoForm onAdd={handleAddTodo} />
             <ul style={{ listStyle: 'none', padding: 0 }}>
                 {todos.map(todo => (
                     <li key={todo.id} style={{
