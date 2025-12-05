@@ -32,7 +32,7 @@ export default function App() {
       <ToggleHabilidades onToggle={toggleHabilidades} mostrar={mostrarHabilidades} />
       {mostrarHabilidades && <Habilidades habilidades={habilidades} />}
 
-      <StackTecnologias />
+      <StackTecnologias tecnologias={tecnologias} />
       <FormularioTecnologia agregarTecnologia={agregarTecnologia} />
     </div>
   );
