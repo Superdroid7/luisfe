@@ -25,6 +25,12 @@ function Todos() {
         setTodos([newTodo, ...todos]);
     };
 
+    const handleToggleComplete = (id) => {
+        setTodos(todos.map(todo =>
+            todo.id === id ? { ...todo, completed: !todo.completed } : todo
+        ));
+    };
+
     return (
         <div>
             <h1>Lista de Tareas</h1>
@@ -38,11 +44,18 @@ function Todos() {
                         justifyContent: 'space-between',
                         alignItems: 'center'
                     }}>
-                        <span style={{
-                            textDecoration: todo.completed ? 'line-through' : 'none',
-                            cursor: 'pointer'
-                        }}>
+                        <span
+                            onClick={() => handleToggleComplete(todo.id)}
+                            style={{
+                                textDecoration: todo.completed ? 'line-through' : 'none',
+                                cursor: 'pointer',
+                                flex: 1
+                            }}
+                        >
                             {todo.title}
+                        </span>
+                        <span style={{ fontSize: '0.8rem', color: todo.completed ? 'green' : 'gray' }}>
+                            {todo.completed ? 'Completado' : 'Pendiente'}
                         </span>
                     </li>
                 ))}
