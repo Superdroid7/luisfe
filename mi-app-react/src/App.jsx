@@ -1,23 +1,31 @@
+import { useState } from 'react';
 import CabeceraCV from "./components/CabeceraCV.jsx";
 import Perfil from "./components/Perfil.jsx";
 import Educacion from "./components/Educacion.jsx";
 import Experiencia from "./components/Experiencia.jsx";
 import StackTecnologias from "./components/StackTecnologias.jsx";
-import { datosPersonales, perfilProfesional, experiencias, educacion } from "./data.js";
+import ToggleHabilidades from "./components/ToggleHabilidades.jsx";
+import Habilidades from "./components/Habilidades.jsx";
+import { datosPersonales, perfilProfesional, experiencias, educacion, habilidades } from "./cvData.js";
 
 export default function App() {
+  const [mostrarHabilidades, setMostrarHabilidades] = useState(false);
+
+  const toggleHabilidades = () => {
+    setMostrarHabilidades(!mostrarHabilidades);
+  };
+
   return (
     <div>
       {/* Sección de CV */}
-      <CabeceraCV
-        nombre={datosPersonales.nombre}
-        cargo={datosPersonales.cargo}
-        ciudad={datosPersonales.ciudad}
-        contacto={datosPersonales.contacto}
-      />
+      <CabeceraCV {...datosPersonales} />
       <Perfil resumen={perfilProfesional} />
       <Experiencia experiencias={experiencias} />
       <Educacion educacion={educacion} />
+
+      <ToggleHabilidades onToggle={toggleHabilidades} mostrar={mostrarHabilidades} />
+      {mostrarHabilidades && <Habilidades habilidades={habilidades} />}
+
       <StackTecnologias />
     </div>
   );
