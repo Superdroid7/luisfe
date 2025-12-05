@@ -1,0 +1,81 @@
+/* Layout Utilities */
+.ft-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.ft-main {
+    padding: 2rem 0;
+}
+
+.ft-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.ft-tri-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.ft-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+/* Header */
+.ft-header {
+    background-color: var(--white);
+    padding: 1rem 0;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.ft-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ft-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--text-color);
+}
+
+.ft-logo svg {
+    color: var(--primary-color);
+    width: 24px;
+    height: 24px;
+}
+
+.ft-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.ft-nav-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.ft-nav-link:hover,
+.ft-nav-link.active {
+    color: var(--primary-color);
+    background-color: #e0f2fe;
+}

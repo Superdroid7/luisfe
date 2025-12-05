@@ -1,0 +1,279 @@
+/* Dashboard Stats */
+.ft-stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.ft-stat-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.ft-stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ft-stat-icon.blue {
+    background-color: #e0f2fe;
+    color: var(--primary-color);
+}
+
+.ft-stat-icon.green {
+    background-color: #dcfce7;
+    color: var(--success);
+}
+
+.ft-stat-icon.orange {
+    background-color: #fef3c7;
+    color: var(--warning);
+}
+
+.ft-stat-icon.red {
+    background-color: #fee2e2;
+    color: var(--danger);
+}
+
+.ft-stat-label {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.ft-stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Dashboard Actions */
+.ft-actions-grid {
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+.ft-action-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 180px;
+}
+
+.ft-action-card.primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.ft-action-card.primary p {
+    color: #e0f2fe;
+}
+
+.ft-action-icon-circle {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.ft-action-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Activity List */
+.ft-bottom-grid {
+    grid-template-columns: 1fr 1fr;
+}
+
+.ft-activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.ft-activity-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.ft-activity-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+    flex-shrink: 0;
+}
+
+.ft-activity-icon.check {
+    background-color: #dcfce7;
+    color: var(--success);
+}
+
+.ft-activity-icon.plus {
+    background-color: #e0f2fe;
+    color: var(--primary-color);
+}
+
+.ft-activity-icon.trophy {
+    background-color: #fef3c7;
+    color: var(--warning);
+}
+
+.ft-activity-title {
+    font-weight: 500;
+}
+
+.ft-activity-time {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* Upcoming Workouts & List */
+.ft-upcoming-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.ft-upcoming-card {
+    padding: 1rem;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    box-shadow: none;
+}
+
+.ft-upcoming-card.blue-bg {
+    background-color: #f0f9ff;
+    border-color: #bae6fd;
+}
+
+.ft-upcoming-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+}
+
+.ft-upcoming-row.blue-bg {
+    background-color: #f0f9ff;
+    border: 1px solid #bae6fd;
+}
+
+.ft-upcoming-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.ft-icon-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.ft-icon-circle.blue-bg {
+    background-color: #e0f2fe;
+    color: var(--primary-color);
+}
+
+.ft-icon-circle.green-bg {
+    background-color: #dcfce7;
+    color: var(--success);
+}
+
+.ft-icon-circle.purple-bg {
+    background-color: #f3e8ff;
+    color: #9333ea;
+}
+
+.ft-upcoming-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.ft-upcoming-title {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.ft-upcoming-time {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.ft-upcoming-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Workout Cards */
+.ft-workout-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.ft-workout-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.ft-workout-type {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.ft-workout-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.ft-stat-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.ft-card-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
+.ft-btn-full {
+    flex: 1;
+}
+
+.ft-icon-box {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+}
