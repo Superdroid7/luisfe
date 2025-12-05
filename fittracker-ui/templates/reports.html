@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitTracker - Reports</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="ft-header">
+        <div class="ft-container ft-header-content">
+            <div class="ft-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M18.37 2.63 14 7l-1.59-1.59a2 2 0 0 0-2.82 0L8 7l9 9 1.59-1.59a2 2 0 0 0 0-2.82L17 10l4.37-4.37a2.12 2.12 0 1 0-3-3Z" />
+                    <path d="M9 16a2 2 0 0 1-2.83 0L2 11.83a2 2 0 0 1 0-2.83l3.59-3.59a2 2 0 0 1 2.83 0L10 7" />
+                </svg>
+                FitTracker
+            </div>
+            <nav class="ft-nav">
+                <a href="../index.html" class="ft-nav-link">Dashboard</a>
+                <a href="workouts.html" class="ft-nav-link">Workouts</a>
+                <a href="schedule.html" class="ft-nav-link">Schedule</a>
+                <a href="reports.html" class="ft-nav-link active">Reports</a>
+            </nav>
+            <div class="ft-user-actions">
+                <button class="ft-icon-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+                        <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+                    </svg>
+                </button>
+                <div class="ft-avatar">JD</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="ft-container ft-main">
+        <div class="ft-page-header">
+            <div>
+                <h1 class="ft-title">Progress Reports</h1>
+                <p class="ft-subtitle">Track your fitness journey and achievements</p>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+                <select class="ft-select" style="width: auto;">
+                    <option>Last 30 Days</option>
+                    <option>Last 3 Months</option>
+                    <option>This Year</option>
+                </select>
+                <button class="ft-btn ft-btn-outline">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    Export
+                </button>
+            </div>
+        </div>
+
+        <div class="ft-grid ft-stats-grid">
+            <div class="ft-card ft-stat-card">
+                <div class="ft-stat-icon blue">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6.5 6.5h11M6.5 17.5h11M6 20v-2.5h12V20M6 4v2.5h12V4M9 4v16M15 4v16" />
+                    </svg>
+                </div>
+                <div>
+                    <div class="ft-stat-label">Total Workouts</div>
+                    <div class="ft-stat-value">24</div>
+                </div>
+            </div>
+            <div class="ft-card ft-stat-card">
+                <div class="ft-stat-icon green">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                    </svg>
+                </div>
+                <div>
+                    <div class="ft-stat-label">Avg Heart Rate</div>
+                    <div class="ft-stat-value">142 bpm</div>
+                </div>
+            </div>
+            <div class="ft-card ft-stat-card">
+                <div class="ft-stat-icon red">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                    </svg>
+                </div>
+                <div>
+                    <div class="ft-stat-label">Calories Burned</div>
+                    <div class="ft-stat-value">12,450</div>
+                </div>
+            </div>
+            <div class="ft-card ft-stat-card">
+                <div class="ft-stat-icon orange">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                </div>
+                <div>
+                    <div class="ft-stat-label">Active Time</div>
+                    <div class="ft-stat-value">18h 30m</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ft-grid ft-bottom-grid" style="margin-top: 1.5rem;">
+            <!-- Workout Frequency Chart -->
+            <div class="ft-card">
+                <div class="ft-chart-header">
+                    <h3 class="ft-section-title" style="margin-bottom: 0;">Workout Frequency</h3>
+                    <span class="ft-badge-gray">Last 7 days</span>
+                </div>
+                <div class="ft-chart-body">
+                    <div class="ft-y-axis">
+                        <span>2.0</span>
+                        <span>1.5</span>
+                        <span>1.0</span>
+                        <span>0.5</span>
+                        <span>0</span>
+                    </div>
+                    <div class="ft-bar-chart-area">
+                        <div class="ft-grid-lines">
+                            <div class="ft-grid-line"></div>
+                            <div class="ft-grid-line"></div>
+                            <div class="ft-grid-line"></div>
+                            <div class="ft-grid-line"></div>
+                            <div class="ft-grid-line"></div>
+                        </div>
+                        <div class="ft-bars-container">
+                            <div class="ft-bar-group">
+                                <div class="ft-bar-fill" style="height: 50%;"></div>
+                                <span class="ft-bar-label">Mon</span>
+                            </div>
+                            <div class="ft-bar-group">
+                                <div class="ft-bar-fill" style="height: 0%;"></div>
+                                <span class="ft-bar-label">Tue</span>
+                            </div>
+                            <div class="ft-bar-group">
+                                <div class="ft-bar-fill" style="height: 75%;"></div>
+                                <span class="ft-bar-label">Wed</span>
+                            </div>
+                            <div class="ft-bar-group">
+                                <div class="ft-bar-fill" style="height: 0%;"></div>
+                                <span class="ft-bar-label">Thu</span>
+                            </div>
+                            <div class="ft-bar-group">
+                                <div class="ft-bar-fill" style="height: 100%;"></div>
+                                <span class="ft-bar-label">Fri</span>
+                            </div>
+                            <div class="ft-bar-group">
+                                <div class="ft-bar-fill" style="height: 25%;"></div>
+                                <span class="ft-bar-label">Sat</span>
+                            </div>
+                            <div class="ft-bar-group">
+                                <div class="ft-bar-fill" style="height: 0%;"></div>
+                                <span class="ft-bar-label">Sun</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strength Progress Chart -->
+            <div class="ft-card">
+                <div class="ft-chart-header">
+                    <h3 class="ft-section-title" style="margin-bottom: 0;">Strength Progress</h3>
+                    <span class="ft-badge-gray">Bench Press</span>
+                </div>
+                <div class="ft-chart-body">
+                    <div class="ft-y-axis">
+                        <span>86</span>
+                        <span>82</span>
+                        <span>78</span>
+                        <span>74</span>
+                        <span>70</span>
+                    </div>
+                    <div class="ft-line-chart-area">
+                        <div class="ft-grid-lines">
+                            <div class="ft-grid-line"></div>
+                            <div class="ft-grid-line"></div>
+                            <div class="ft-grid-line"></div>
+                            <div class="ft-grid-line"></div>
+                            <div class="ft-grid-line"></div>
+                        </div>
+                        <svg class="ft-svg-chart" viewBox="0 0 100 100" preserveAspectRatio="none">
+                            <polyline points="0,80 33,60 66,40 100,20" fill="none" stroke="#0ea5e9" stroke-width="3"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <circle cx="0" cy="80" r="3" fill="#0ea5e9" />
+                            <circle cx="33" cy="60" r="3" fill="#0ea5e9" />
+                            <circle cx="66" cy="40" r="3" fill="#0ea5e9" />
+                            <circle cx="100" cy="20" r="3" fill="#0ea5e9" />
+                        </svg>
+                        <div class="ft-x-axis">
+                            <span>Week 1</span>
+                            <span>Week 2</span>
+                            <span>Week 3</span>
+                            <span>Week 4</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ft-tri-grid">
+            <div class="ft-card">
+                <h3 class="ft-section-title">Workout Types</h3>
+                <div class="ft-pie-chart">
+                    <div class="ft-pie-hole"></div>
+                </div>
+                <div class="ft-legend">
+                    <div class="ft-legend-item">
+                        <div class="ft-dot" style="background-color: var(--primary-color);"></div>
+                        Strength
+                    </div>
+                    <div class="ft-legend-item">
+                        <div class="ft-dot" style="background-color: var(--success);"></div>
+                        Cardio
+                    </div>
+                    <div class="ft-legend-item">
+                        <div class="ft-dot" style="background-color: var(--warning);"></div>
+                        HIIT
+                    </div>
+                </div>
+            </div>
+
+            <div class="ft-card">
+                <h3 class="ft-section-title">Personal Records</h3>
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="color: var(--text-muted);">Bench Press</span>
+                        <span style="font-weight: 700;">85 kg</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="color: var(--text-muted);">Squat</span>
+                        <span style="font-weight: 700;">110 kg</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="color: var(--text-muted);">Deadlift</span>
+                        <span style="font-weight: 700;">130 kg</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="color: var(--text-muted);">5k Run</span>
+                        <span style="font-weight: 700;">24:30</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ft-card">
+                <h3 class="ft-section-title">Monthly Goals</h3>
+                <div class="ft-goal-item">
+                    <div class="ft-goal-header">
+                        <span>Workouts</span>
+                        <span>12/20</span>
+                    </div>
+                    <div class="ft-progress-bg">
+                        <div class="ft-progress-fill" style="width: 60%;"></div>
+                    </div>
+                </div>
+                <div class="ft-goal-item">
+                    <div class="ft-goal-header">
+                        <span>Calories</span>
+                        <span>12.5k/20k</span>
+                    </div>
+                    <div class="ft-progress-bg">
+                        <div class="ft-progress-fill" style="width: 62%;"></div>
+                    </div>
+                </div>
+                <div class="ft-goal-item">
+                    <div class="ft-goal-header">
+                        <span>Active Minutes</span>
+                        <span>850/1200</span>
+                    </div>
+                    <div class="ft-progress-bg">
+                        <div class="ft-progress-fill" style="width: 70%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ft-card" style="margin-top: 1.5rem;">
+            <h3 class="ft-section-title">Recent Workout History</h3>
+            <div class="ft-table-container">
+                <table class="ft-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Workout Name</th>
+                            <th>Type</th>
+                            <th>Duration</th>
+                            <th>Calories</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Jan 15, 2024</td>
+                            <td>Upper Body Power</td>
+                            <td>Strength</td>
+                            <td>45 min</td>
+                            <td>320</td>
+                            <td><span class="ft-status-badge ft-status-completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>Jan 13, 2024</td>
+                            <td>HIIT Cardio Blast</td>
+                            <td>Cardio</td>
+                            <td>30 min</td>
+                            <td>450</td>
+                            <td><span class="ft-status-badge ft-status-completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>Jan 12, 2024</td>
+                            <td>Leg Day Intensity</td>
+                            <td>Strength</td>
+                            <td>60 min</td>
+                            <td>510</td>
+                            <td><span class="ft-status-badge ft-status-completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>Jan 10, 2024</td>
+                            <td>Core & Abs</td>
+                            <td>Strength</td>
+                            <td>20 min</td>
+                            <td>150</td>
+                            <td><span class="ft-status-badge ft-status-completed">Completed</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="ft-pagination">
+                <button class="ft-btn-small">Previous</button>
+                <button class="ft-btn-small">Next</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

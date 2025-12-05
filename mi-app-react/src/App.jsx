@@ -10,28 +10,21 @@ import FormularioTecnologia from "./components/FormularioTecnologia.jsx";
 import { datosPersonales, perfilProfesional, experiencias, educacion, habilidades, tecnologiasIniciales } from "./cvData.js";
 
 export default function App() {
+  const [mostrarHabilidades, setMostrarHabilidades] = useState(true);
   const [tecnologias, setTecnologias] = useState(tecnologiasIniciales);
-  const [mostrarHabilidades, setMostrarHabilidades] = useState(false);
 
   const agregarTecnologia = (nuevaTecnologia) => {
     setTecnologias([...tecnologias, nuevaTecnologia]);
   };
 
-  const toggleHabilidades = () => {
-    setMostrarHabilidades(!mostrarHabilidades);
-  };
-
   return (
-    <div>
-      {/* Sección de CV */}
-      <CabeceraCV {...datosPersonales} />
-      <Perfil resumen={perfilProfesional} />
+    <div className="app-container">
+      <CabeceraCV datos={datosPersonales} />
+      <Perfil perfil={perfilProfesional} />
       <Experiencia experiencias={experiencias} />
       <Educacion educacion={educacion} />
-
-      <ToggleHabilidades onToggle={toggleHabilidades} mostrar={mostrarHabilidades} />
+      <ToggleHabilidades mostrar={mostrarHabilidades} onToggle={() => setMostrarHabilidades(!mostrarHabilidades)} />
       {mostrarHabilidades && <Habilidades habilidades={habilidades} />}
-
       <StackTecnologias tecnologias={tecnologias} />
       <FormularioTecnologia agregarTecnologia={agregarTecnologia} />
     </div>

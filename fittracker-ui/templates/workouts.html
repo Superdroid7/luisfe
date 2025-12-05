@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitTracker - Workouts</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="ft-header">
+        <div class="ft-container ft-header-content">
+            <div class="ft-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M18.37 2.63 14 7l-1.59-1.59a2 2 0 0 0-2.82 0L8 7l9 9 1.59-1.59a2 2 0 0 0 0-2.82L17 10l4.37-4.37a2.12 2.12 0 1 0-3-3Z" />
+                    <path d="M9 16a2 2 0 0 1-2.83 0L2 11.83a2 2 0 0 1 0-2.83l3.59-3.59a2 2 0 0 1 2.83 0L10 7" />
+                </svg>
+                FitTracker
+            </div>
+            <nav class="ft-nav">
+                <a href="../index.html" class="ft-nav-link">Dashboard</a>
+                <a href="workouts.html" class="ft-nav-link active">Workouts</a>
+                <a href="schedule.html" class="ft-nav-link">Schedule</a>
+                <a href="reports.html" class="ft-nav-link">Reports</a>
+            </nav>
+            <div class="ft-user-actions">
+                <button class="ft-icon-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+                        <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+                    </svg>
+                </button>
+                <div class="ft-avatar">JD</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="ft-container ft-main">
+        <div class="ft-page-header">
+            <div>
+                <h1 class="ft-title">My Workouts</h1>
+                <p class="ft-subtitle">Manage and track your training plans</p>
+            </div>
+            <button class="ft-btn ft-btn-primary">+ Create New Workout</button>
+        </div>
+
+        <div class="ft-filters-bar">
+            <input type="text" placeholder="Search workouts..." class="ft-search-input">
+            <button class="ft-filter-btn">All Types</button>
+            <button class="ft-filter-btn">Strength</button>
+            <button class="ft-filter-btn">Cardio</button>
+            <button class="ft-filter-btn">HIIT</button>
+        </div>
+
+        <div class="ft-grid ft-stats-grid">
+            <!-- Workout Card 1 -->
+            <div class="ft-card ft-workout-card">
+                <div class="ft-workout-header">
+                    <div>
+                        <h3 style="font-weight: 600;">Upper Body Strength</h3>
+                        <span class="ft-workout-type">Strength Training</span>
+                    </div>
+                    <button class="ft-icon-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="1" />
+                            <circle cx="19" cy="12" r="1" />
+                            <circle cx="5" cy="12" r="1" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="ft-workout-stats">
+                    <div class="ft-stat-row">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                        45-60 min
+                    </div>
+                    <div class="ft-stat-row">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6.5 6.5h11M6.5 17.5h11M6 20v-2.5h12V20M6 4v2.5h12V4M9 4v16M15 4v16" />
+                        </svg>
+                        8 exercises
+                    </div>
+                </div>
+                <div class="ft-card-actions">
+                    <button class="ft-btn ft-btn-primary ft-btn-full">Start Workout</button>
+                    <button class="ft-icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Workout Card 2 -->
+            <div class="ft-card ft-workout-card">
+                <div class="ft-workout-header">
+                    <div>
+                        <h3 style="font-weight: 600;">Leg Day Power</h3>
+                        <span class="ft-workout-type">Strength Training</span>
+                    </div>
+                    <button class="ft-icon-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="1" />
+                            <circle cx="19" cy="12" r="1" />
+                            <circle cx="5" cy="12" r="1" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="ft-workout-stats">
+                    <div class="ft-stat-row">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                        60-75 min
+                    </div>
+                    <div class="ft-stat-row">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6.5 6.5h11M6.5 17.5h11M6 20v-2.5h12V20M6 4v2.5h12V4M9 4v16M15 4v16" />
+                        </svg>
+                        6 exercises
+                    </div>
+                </div>
+                <div class="ft-card-actions">
+                    <button class="ft-btn ft-btn-primary ft-btn-full">Start Workout</button>
+                    <button class="ft-icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Workout Card 3 -->
+            <div class="ft-card ft-workout-card">
+                <div class="ft-workout-header">
+                    <div>
+                        <h3 style="font-weight: 600;">HIIT Cardio</h3>
+                        <span class="ft-workout-type">HIIT</span>
+                    </div>
+                    <button class="ft-icon-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="1" />
+                            <circle cx="19" cy="12" r="1" />
+                            <circle cx="5" cy="12" r="1" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="ft-workout-stats">
+                    <div class="ft-stat-row">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                        30 min
+                    </div>
+                    <div class="ft-stat-row">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6.5 6.5h11M6.5 17.5h11M6 20v-2.5h12V20M6 4v2.5h12V4M9 4v16M15 4v16" />
+                        </svg>
+                        12 exercises
+                    </div>
+                </div>
+                <div class="ft-card-actions">
+                    <button class="ft-btn ft-btn-primary ft-btn-full">Start Workout</button>
+                    <button class="ft-icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

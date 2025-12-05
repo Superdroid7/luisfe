@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitTracker - Dashboard</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="ft-header">
+        <div class="ft-container ft-header-content">
+            <div class="ft-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.37 2.63 14 7l-1.59-1.59a2 2 0 0 0-2.82 0L8 7l9 9 1.59-1.59a2 2 0 0 0 0-2.82L17 10l4.37-4.37a2.12 2.12 0 1 0-3-3Z"/><path d="M9 16a2 2 0 0 1-2.83 0L2 11.83a2 2 0 0 1 0-2.83l3.59-3.59a2 2 0 0 1 2.83 0L10 7"/></svg>
+                FitTracker
+            </div>
+            <nav class="ft-nav">
+                <a href="index.html" class="ft-nav-link active">Dashboard</a>
+                <a href="templates/workouts.html" class="ft-nav-link">Workouts</a>
+                <a href="templates/schedule.html" class="ft-nav-link">Schedule</a>
+                <a href="templates/reports.html" class="ft-nav-link">Reports</a>
+            </nav>
+            <div class="ft-user-actions">
+                <button class="ft-icon-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+                </button>
+                <div class="ft-avatar">JD</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="ft-container ft-main">
+        <h1 class="ft-title">Welcome back, John!</h1>
+        <p class="ft-subtitle">Here's your activity overview for today</p>
+
+        <!-- Stats Grid -->
+        <div class="ft-grid ft-stats-grid">
+            <div class="ft-card ft-stat-card">
+                <div class="ft-stat-icon blue">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5h11M6.5 17.5h11M6 20v-2.5h12V20M6 4v2.5h12V4M9 4v16M15 4v16"/></svg>
+                </div>
+                <div>
+                    <div class="ft-stat-label">Workouts</div>
+                    <div class="ft-stat-value">12</div>
+                </div>
+            </div>
+            <div class="ft-card ft-stat-card">
+                <div class="ft-stat-icon green">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                </div>
+                <div>
+                    <div class="ft-stat-label">Calories</div>
+                    <div class="ft-stat-value">8,450</div>
+                </div>
+            </div>
+            <div class="ft-card ft-stat-card">
+                <div class="ft-stat-icon orange">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div>
+                    <div class="ft-stat-label">Minutes</div>
+                    <div class="ft-stat-value">420</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="ft-grid ft-actions-grid" style="margin-top: 1.5rem;">
+            <div class="ft-card ft-action-card primary">
+                <div>
+                    <div class="ft-action-icon-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Create Workout</h3>
+                    <p style="font-size: 0.875rem;">Design your next training session</p>
+                </div>
+                <button class="ft-btn-link">Get Started &rarr;</button>
+            </div>
+            <div class="ft-card ft-action-card">
+                <div>
+                    <div class="ft-action-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                        <span style="font-weight: 600;">My Workouts</span>
+                    </div>
+                    <p style="font-size: 0.875rem; color: var(--text-muted);">Manage your workout plans</p>
+                </div>
+                <button class="ft-btn-small">View All &rarr;</button>
+            </div>
+            <div class="ft-card ft-action-card">
+                <div>
+                    <div class="ft-action-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                        <span style="font-weight: 600;">Schedule</span>
+                    </div>
+                    <p style="font-size: 0.875rem; color: var(--text-muted);">Plan your upcoming sessions</p>
+                </div>
+                <button class="ft-btn-small">Schedule Now &rarr;</button>
+            </div>
+        </div>
+
+        <!-- Bottom Grid -->
+        <div class="ft-grid ft-bottom-grid" style="margin-top: 1.5rem;">
+            <!-- Recent Activity -->
+            <div class="ft-section">
+                <h3 class="ft-section-title">Recent Activity</h3>
+                <div class="ft-activity-list">
+                    <div class="ft-activity-item">
+                        <div class="ft-activity-icon check">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div>
+                            <div class="ft-activity-title">Completed Full Body Workout</div>
+                            <div class="ft-activity-time">2 hours ago</div>
+                        </div>
+                    </div>
+                    <div class="ft-activity-item">
+                        <div class="ft-activity-icon plus">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </div>
+                        <div>
+                            <div class="ft-activity-title">Created Leg Day Routine</div>
+                            <div class="ft-activity-time">Yesterday</div>
+                        </div>
+                    </div>
+                    <div class="ft-activity-item">
+                        <div class="ft-activity-icon trophy">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+                        </div>
+                        <div>
+                            <div class="ft-activity-title">New PR: Bench Press 85kg</div>
+                            <div class="ft-activity-time">3 days ago</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming Workouts -->
+            <div class="ft-section">
+                <h3 class="ft-section-title">Upcoming Workouts</h3>
+                <div class="ft-upcoming-list">
+                    <div class="ft-card ft-upcoming-card ft-upcoming-row blue-bg">
+                        <div class="ft-upcoming-left">
+                            <div class="ft-icon-circle blue-bg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6.5 6.5h11M6.5 17.5h11M6 20v-2.5h12V20M6 4v2.5h12V4M9 4v16M15 4v16"></path></svg>
+                            </div>
+                            <div class="ft-upcoming-info">
+                                <span class="ft-upcoming-title">Upper Body Strength</span>
+                                <span class="ft-upcoming-time">Today, 6:00 PM</span>
+                            </div>
+                        </div>
+                        <div class="ft-upcoming-actions">
+                            <button class="ft-btn-xs primary">Start Now</button>
+                            <button class="ft-icon-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="ft-card ft-upcoming-card ft-upcoming-row">
+                        <div class="ft-upcoming-left">
+                            <div class="ft-icon-circle green-bg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z"></path></svg>
+                            </div>
+                            <div class="ft-upcoming-info">
+                                <span class="ft-upcoming-title">Cardio Session</span>
+                                <span class="ft-upcoming-time">Tomorrow, 7:00 AM</span>
+                            </div>
+                        </div>
+                        <div class="ft-upcoming-actions">
+                            <button class="ft-btn-xs outline">Reschedule</button>
+                            <button class="ft-icon-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="ft-card ft-upcoming-card ft-upcoming-row">
+                        <div class="ft-upcoming-left">
+                            <div class="ft-icon-circle purple-bg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                            </div>
+                            <div class="ft-upcoming-info">
+                                <span class="ft-upcoming-title">Leg Day Power</span>
+                                <span class="ft-upcoming-time">Friday, 5:30 PM</span>
+                            </div>
+                        </div>
+                        <div class="ft-upcoming-actions">
+                            <button class="ft-btn-xs outline">Reschedule</button>
+                            <button class="ft-icon-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
