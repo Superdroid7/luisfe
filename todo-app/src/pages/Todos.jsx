@@ -4,17 +4,27 @@ import TodoForm from '../components/TodoForm';
 function Todos() {
     const [todos, setTodos] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
         setLoading(true);
+        setError(null);
         // Fetch initial todos from API
         fetch('https://jsonplaceholder.typicode.com/todos?_limit=10')
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Error al cargar datos');
+                }
+                return response.json();
+            })
             .then(data => {
                 console.log('Todos fetched:', data);
                 setTodos(data);
             })
-            .catch(error => console.error('Error fetching todos:', error))
+            .catch(err => {
+                console.error('Error fetching todos:', err);
+                setError(err.message);
+            })
             .finally(() => setLoading(false));
     }, []);
 
@@ -38,9 +48,8 @@ function Todos() {
         setTodos(todos.filter(todo => todo.id !== id));
     };
 
-    if (loading) {
-        return <div>Cargando tareas...</div>;
-    }
+    if (loading) return <div>Cargando tareas...</div>;
+    if (error) return <div style={{ color: 'red' }}>Error: {error}</div>;
 
     return (
         <div>
