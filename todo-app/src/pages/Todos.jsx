@@ -3,8 +3,10 @@ import TodoForm from '../components/TodoForm';
 
 function Todos() {
     const [todos, setTodos] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+        setLoading(true);
         // Fetch initial todos from API
         fetch('https://jsonplaceholder.typicode.com/todos?_limit=10')
             .then(response => response.json())
@@ -12,7 +14,8 @@ function Todos() {
                 console.log('Todos fetched:', data);
                 setTodos(data);
             })
-            .catch(error => console.error('Error fetching todos:', error));
+            .catch(error => console.error('Error fetching todos:', error))
+            .finally(() => setLoading(false));
     }, []);
 
     const handleAddTodo = (title) => {
@@ -34,6 +37,10 @@ function Todos() {
     const handleDelete = (id) => {
         setTodos(todos.filter(todo => todo.id !== id));
     };
+
+    if (loading) {
+        return <div>Cargando tareas...</div>;
+    }
 
     return (
         <div>
