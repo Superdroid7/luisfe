@@ -17,7 +17,24 @@ function Todos() {
     return (
         <div>
             <h1>Lista de Tareas</h1>
-            <p>Revisa la consola para ver los datos cargados.</p>
+            <ul style={{ listStyle: 'none', padding: 0 }}>
+                {todos.map(todo => (
+                    <li key={todo.id} style={{
+                        padding: '1rem',
+                        borderBottom: '1px solid #ccc',
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center'
+                    }}>
+                        <span style={{
+                            textDecoration: todo.completed ? 'line-through' : 'none',
+                            cursor: 'pointer'
+                        }}>
+                            {todo.title}
+                        </span>
+                    </li>
+                ))}
+            </ul>
         </div>
     );
 }
